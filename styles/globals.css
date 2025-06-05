@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .article-content h1 {
+    @apply text-3xl font-bold mb-4;
+  }
+  
+  .article-content h2 {
+    @apply text-2xl font-semibold mb-3;
+  }
+  
+  .article-content p {
+    @apply mb-4 leading-relaxed;
+  }
+  
+  .article-content a {
+    @apply text-blue-600 hover:text-blue-800 underline;
+  }
+  
+  .news-card {
+    @apply bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden;
+  }
+  
+  .news-thumbnail {
+    @apply w-full h-48 object-cover;
+  }
+  
+  .news-content {
+    @apply p-6;
+  }
+  
+  .news-title {
+    @apply text-xl font-semibold mb-2 text-gray-900 line-clamp-2;
+  }
+  
+  .news-excerpt {
+    @apply text-gray-600 text-sm mb-3 line-clamp-3;
+  }
+  
+  .news-meta {
+    @apply flex items-center justify-between text-xs text-gray-500;
+  }
+}
