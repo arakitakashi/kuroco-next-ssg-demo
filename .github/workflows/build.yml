@@ -11,6 +11,9 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+env:
+  NEXT_PUBLIC_KUROCO_API: ${{secrets.NEXT_PUBLIC_BASE_URL}}
+
 jobs:
   # for Pull Request (exclude merged)
   pullreq_build:
